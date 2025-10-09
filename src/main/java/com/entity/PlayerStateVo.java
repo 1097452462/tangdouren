@@ -30,12 +30,12 @@ public class PlayerStateVo {
 
     // 检查是否无敌
     public boolean isInvincible() {
-        return extra_status.stream().anyMatch(status -> "INV".equals(status.type));
+        return extra_status.stream().anyMatch(status -> "INV".equals(status.name));
     }
 
     // 检查是否可以穿越炸弹
     public boolean canPassBombs() {
-        return extra_status.stream().anyMatch(status -> "THB".equals(status.type));
+        return extra_status.stream().anyMatch(status -> "THB".equals(status.name));
     }
 
     // 获取移动速度（格/秒）
